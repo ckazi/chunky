@@ -23,7 +23,7 @@ Clone the repository to your local machine:
 ```bash
 git clone https://github.com/ckazi/chunky.git
 cd chunky
-go mod init github.com/ckazi/chunky.git
+go mod init github.com/ckazi/chunky
 go get github.com/jackc/pgx/v5
 ```
 
