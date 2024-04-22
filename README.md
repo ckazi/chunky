@@ -66,6 +66,14 @@ go run main.go -dbname mydatabase -table usertable -U admin -pwd securepassword 
 go run main.go -dbname mydatabase -table usertable -U admin -pwd securepassword -del true -file deletion_log.txt
 ```
 
+### Monitoring
+![image](https://github.com/ckazi/chunky/assets/45271263/34b63594-1570-4eda-909f-85545386adf8)
+You can see the process of the check by executing the following SQL query on your database:
+```sql
+SELECT pid, usename, application_name, client_addr, backend_start, query_start, state, query FROM pg_stat_activity WHERE state = 'active';
+```
+
+
 ### Building the Project
 ```bash
 git clone https://github.com/ckazi/chunky.git
