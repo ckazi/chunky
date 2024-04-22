@@ -25,6 +25,7 @@ git clone https://github.com/ckazi/chunky.git
 cd chunky
 go mod init github.com/ckazi/chunky
 go get github.com/jackc/pgx/v5
+go get github.com/jackc/pgx/v5/pgxpool@v5.5.5
 ```
 
 ## Usage
