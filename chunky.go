@@ -112,7 +112,14 @@ func findErrRow(ctx context.Context, pool *pgxpool.Pool, lim, startOffset int) {
 		return
 	}
 
-	half := lim / 2
+	half := 0
+
+	if lim%2 != 0 {
+		half = lim/2 + 1
+	} else {
+		half = lim / 2
+	}
+
 	err := checkQuery(ctx, pool, half, startOffset)
 	if err != nil {
 		findErrRow(ctx, pool, half, startOffset)
