@@ -81,7 +81,8 @@ git clone https://github.com/ckazi/chunky.git
 cd chunky
 go mod init github.com/ckazi/chunky.git
 go get github.com/jackc/pgx/v5
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -ldflags '-extldflags "-static"'
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -ldflags '-extldflags "-static"' # Linux
+CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -a -ldflags '-extldflags "-static"' # Windows
 ```
 
   
